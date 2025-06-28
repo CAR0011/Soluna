@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "titulo": "Villa contemporánea · 5 hab · 4 baños",
+    "precio": 750000,
+    "imagen": "1.jpg",
+    "tipo": "Venta"
+  },
+  {
+    "id": 2,
+    "titulo": "Apartamento céntrico · 2 hab · 1 baño",
+    "precio": 800,
+    "unidad": "mes",
+    "imagen": "2.jpg",
+    "tipo": "Renta"
+  }
+]
+

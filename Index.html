@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SOLUNA Bienes Raíces</title>
+
+  <!-- Montserrat -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="logo">
+        <img src="assets/Images/logo.jpg" alt="SOLUNA">
+      </a>
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Comprar</a></li>
+          <li><a href="#">Rentar</a></li>
+          <li><a href="#">Vender</a></li>
+          <li><a href="#">Desarrollo</a></li>
+          <li><a href="#">Agentes</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a class="btn-contacto" href="#contacto">Contáctanos</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO + SEARCH -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1>Haz tu mejor movimiento</h1>
+      <p>Propiedades de lujo en venta y renta</p>
+      <a href="#propiedades" class="btn-primary">Ver Propiedades</a>
+    </div>
+    <form class="search-bar container">
+      <input type="text" placeholder="Buscar ciudad, barrio o código" />
+      <select>
+        <option>Venta</option>
+        <option>Renta</option>
+      </select>
+      <select>
+        <option>1+ hab</option>
+        <option>2+ hab</option>
+        <option>3+ hab</option>
+      </select>
+      <select>
+        <option>Precio mínimo</option>
+        <option>$100K</option>
+        <option>$200K+</option>
+      </select>
+      <button type="submit">Buscar</button>
+    </form>
+  </section>
+
+  <!-- REGIONES -->
+  <nav class="regions container">
+    <a href="#">San Pedro Sula</a>
+    <a href="#">Tegucigalpa</a>
+    <a href="#">La Ceiba</a>
+    <a href="#">Choloma</a>
+    <a href="#">¡Ver más!</a>
+  </nav>
+
+  <!-- PROPIEDADES DESTACADAS -->
+  <section id="propiedades" class="properties-section container">
+    <h2>Propiedades destacadas</h2>
+    <div class="properties-grid" id="grid-propiedades">
+      <!-- Las tarjetas se insertarán aquí con JavaScript -->
+    </div>
+    <div class="view-more">
+      <a href="#" class="btn-primary-outline">Ver más propiedades</a>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER CTA -->
+  <section class="newsletter container">
+    <h2>Únete a nuestra comunidad</h2>
+    <p>Recibe las mejores ofertas directamente en tu correo</p>
+    <form>
+      <input type="email" placeholder="Tu email" required />
+      <button type="submit">Suscribirme</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <h4>Propiedades</h4>
+        <ul>
+          <li><a href="#">Comprar</a></li>
+          <li><a href="#">Rentar</a></li>
+          <li><a href="#">Desarrollo</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Agentes</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Términos</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Síguenos</h4>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <p class="copyright">
+      © 2025 SOLUNA Bienes Raíces. Todos los derechos reservados.
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
