@@ -1,0 +1,276 @@
+/* 1. Reset y variables */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+:root {
+  --primario: #112B49;
+  --secundario: #F3C12C;
+  --acento: #FFF;
+  --fondo: #F5F5F5;
+  --fuente: 'Montserrat', sans-serif;
+}
+
+/* 2. Global */
+body {
+  font-family: var(--fuente);
+  background: var(--fondo);
+  color: #333;
+  line-height: 1.6;
+}
+.container {
+  width: 90%; max-width: 1200px;
+  margin: auto;
+  padding-top: 70px; /* espaciado para navbar */
+}
+
+/* 3. Navbar */
+.navbar {
+  position: fixed; top: 0; width: 100%;
+  background: var(--acento);
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  z-index: 100;
+}
+.nav-content {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 0;
+}
+.logo img { height: 40px; }
+.menu ul {
+  display: flex; list-style: none; gap: 1.5rem;
+}
+.menu a {
+  color: var(--primario);
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn-contacto {
+  background: var(--primario);
+  color: var(--acento);
+  padding: .5rem 1rem;
+  border-radius: 4px;
+}
+.nav-toggle {
+  display: none; background: none; border: none; font-size: 1.5rem;
+}
+
+/* 4. Hero */
+.hero {
+  position: relative;
+  height: calc(100vh - 70px);
+  background: url('assets/Images/hero.jpg') no-repeat center/cover;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  text-align: center; color: #fff;
+  max-width: 800px; margin: auto;
+}
+.hero-content h1 {
+  font-size: 3.5rem; margin-bottom: .5rem;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+.hero-content p {
+  font-size: 1.3rem; margin-bottom: 1.5rem;
+}
+.btn-primary {
+  background: var(--secundario);
+  color: var(--primario);
+  padding: 1rem 2rem; font-size: 1rem; font-weight: 600;
+  border-radius: 4px; text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background .3s, transform .3s;
+}
+.btn-primary:hover {
+  background: #d0a51f;
+  transform: translateY(-2px);
+}
+
+/* 5. Search bar */
+.search-bar {
+  position: relative; z-index: 2;
+  display: flex; flex-wrap: wrap; gap: .5rem;
+  margin: 2rem auto 0; width: 90%; max-width: 1000px;
+  background: #fff; padding: 1rem; border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.15);
+}
+.search-bar input,
+.search-bar select {
+  flex: 1; min-width: 120px;
+  padding: .75rem 1rem;
+  border: 1px solid #ddd; border-radius: 4px;
+  font-size: .95rem; outline: none;
+}
+.search-bar button {
+  background: var(--primario);
+  color: var(--acento);
+  padding: .75rem 1.5rem; border: none; border-radius: 4px;
+  font-weight: 600; cursor: pointer;
+}
+.search-bar button:hover {
+  background: #0f2338;
+}
+
+/* 6. Regiones */
+.regions {
+  margin-top: 4rem;
+  display: flex; gap: .75rem; flex-wrap: wrap;
+  justify-content: center;
+}
+.regions a {
+  background: #fff; padding: .5rem 1rem;
+  border-radius: 4px; border: 1px solid #ddd;
+  text-decoration: none; color: var(--primario);
+  font-size: .9rem; transition: background .2s, color .2s;
+}
+.regions a:hover {
+  background: var(--primario); color: var(--acento);
+}
+
+/* 7. Propiedades Destacadas */
+.properties-section {
+  padding: 6rem 0 2rem;
+}
+.properties-section h2 {
+  text-align: center; margin-bottom: 2rem; font-size: 2rem;
+}
+.properties-grid {
+  display: grid; gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+}
+.property-card {
+  background: #fff; border-radius: 6px;
+  overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,.05);
+}
+.img-wrap { position: relative; }
+.property-card img {
+  width: 100%; height: 220px; object-fit: cover;
+}
+.status {
+  position: absolute; top: 1rem; left: 1rem;
+  background: var(--secundario); color: var(--primario);
+  padding: .25rem .75rem; border-radius: 4px; font-size: .8rem;
+}
+.info { padding: 1rem; }
+.property-card h3 {
+  font-size: 1.1rem; margin-bottom: .5rem;
+}
+.price {
+  color: var(--secundario); font-weight: 700; margin-bottom: .75rem;
+}
+.btn-secondary {
+  display: inline-block; border: 2px solid var(--primario);
+  color: var(--primario); padding: .5rem 1rem;
+  border-radius: 4px; text-decoration: none; font-weight: 600;
+}
+
+/* 8. Ver más */
+.view-more {
+  text-align: center; margin-top: 3rem;
+}
+.btn-primary-outline {
+  background: transparent; color: var(--primario);
+  border: 2px solid var(--primario);
+  padding: .75rem 1.5rem; border-radius: 4px;
+  text-decoration: none; font-weight: 600;
+}
+
+/* 9. Newsletter */
+.newsletter {
+  background: var(--primario); color: var(--acento);
+  text-align: center; padding: 4rem 1rem; margin: 4rem 0;
+}
+.newsletter h2 { font-size: 2rem; margin-bottom: 1rem; }
+.newsletter p { margin-bottom: 1.5rem; }
+.newsletter input {
+  padding: .75rem 1rem; width: 250px; border: none;
+  border-radius: 4px; margin-right: .5rem;
+}
+.newsletter button {
+  background: var(--secundario); color: var(--primario);
+  padding: .75rem 1.5rem; border: none; border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 10. Detalle de propiedad */
+.btn-back {
+  display: inline-block; margin: 1rem; color: var(--primario);
+  text-decoration: none; font-weight: 600;
+}
+.property-detail {
+  display: flex; flex-wrap: wrap; gap: 2rem; padding: 2rem;
+}
+.gallery {
+  flex: 1 1 300px; display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  gap: 1rem;
+}
+.gallery img {
+  width: 100%; border-radius: 6px; object-fit: cover;
+}
+.detail-info { flex: 1 1 300px; }
+.detail-info h1 { font-size: 2rem; margin-bottom: .5rem; }
+.detail-info .price {
+  color: var(--secundario); font-size: 1.5rem;
+  font-weight: 700; margin-bottom: 1rem;
+}
+.features { list-style: none; margin-bottom: 1rem; }
+.features li { margin-bottom: .5rem; }
+.detail-info h2 { margin: 1.5rem 0 .5rem; }
+.detail-info p { line-height: 1.6; }
+
+/* 11. Footer */
+.site-footer {
+  background: var(--primario); color: var(--acento);
+  padding: 4rem 1rem;
+}
+.footer-grid {
+  display: grid; gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+  margin-bottom: 2rem;
+}
+.site-footer h4 { margin-bottom: 1rem; font-size: 1rem; }
+.site-footer ul { list-style: none; }
+.site-footer a {
+  display: block; color: var(--acento);
+  text-decoration: none; margin-bottom: .5rem;
+  font-size: .9rem;
+}
+.site-footer a:hover { text-decoration: underline; }
+
+/* 12. Responsive móvil & tablet */
+@media (max-width: 1024px) {
+  .properties-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  }
+}
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--acento); }
+  .menu.show { display: block; }
+  .menu ul { flex-direction: column; padding: 1rem; gap: 1rem; }
+
+  .hero-content h1 { font-size: 2.5rem; }
+  .search-bar { flex-direction: column; }
+
+  .regions { justify-content: flex-start; overflow-x: auto; }
+  .properties-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content p { font-size: 1rem; }
+  .btn-primary { padding: .75rem 1.5rem; }
+  .newsletter input { width: 100%; margin-bottom: .5rem; }
+  .newsletter button { width: 100%; }
+  .footer-grid { grid-template-columns: 1fr; text-align: center; }
+}
+
+
+
+
+
